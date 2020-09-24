@@ -1,0 +1,80 @@
+---
+test:
+  name: drugsupplychain
+  description: This is an example benchmark for caliper, to test the backend DLT's
+    performance with a simple drug supply chain concept
+  workers:
+    type: local
+    number: 1
+  rounds:
+  - label: manufacturerCreateDrug
+    description: This benchmark test is for the manufacturer creating of drugs on the ledger
+    txNumber: 100
+    rateControl:
+      type: fixed-rate
+      opts:
+        tps: 50
+    callback: callbacks/manufacturerCreateDrug.js
+  - label: manufacturerShipDrug
+    description: This benchmark test is for the manufacturer shipping of drugs on the ledger
+    txNumber: 100
+    rateControl:
+      type: fixed-rate
+      opts:
+        tps: 100
+    callback: callbacks/manufacturerShipDrug.js
+  - label: distributorReceiveDrug
+    description: This benchmark test is for the distributor receiving of drugs on the ledger
+    txNumber: 100
+    rateControl:
+      type: fixed-rate
+      opts:
+        tps: 100
+    callback: callbacks/distributorReceiveDrug.js
+  - label: distributorShipDrug
+    description: This benchmark test is for the distributor shipping of drugs on the ledger
+    txNumber: 100
+    rateControl:
+      type: fixed-rate
+      opts:
+        tps: 100
+    callback: callbacks/distributorShipDrug.js
+  - label: wholesalerReceiveDrug
+    description: This benchmark test is the wholesaler receiving of drugs on the ledger
+    txNumber: 100
+    rateControl:
+      type: fixed-rate
+      opts:
+        tps: 100
+    callback: callbacks/wholesalerReceiveDrug.js
+  - label: wholesalerShipDrug
+    description: This benchmark test is for the wholesaler shipping of drugs on the ledger
+    txNumber: 100
+    rateControl:
+      type: fixed-rate
+      opts:
+        tps: 100
+    callback: callbacks/wholesalerShipDrug.js
+  - label: retailerReceiveDrug
+    description: This benchmark test is for the retailer receiving of drugs on the ledger
+    txNumber: 100
+    rateControl:
+      type: fixed-rate
+      opts:
+        tps: 100
+    callback: callbacks/retailerReceiveDrug.js
+  - label: retailerSellDrug
+    description: This benchmark test is for the retailer selling of drugs on the ledger
+    txNumber: 100
+    rateControl:
+      type: fixed-rate
+      opts:
+        tps: 100
+    callback: callbacks/retailerSellDrug.js
+monitor:
+  type:
+  - docker
+  docker:
+    name:
+    - all
+  interval: 1

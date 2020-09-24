@@ -1,0 +1,19 @@
+{
+  "name": "drugsupplychainnet",
+  "version": "0.0.1",
+  "description": "package json for smart contract",
+  "main": "index.js",
+  "engines": {
+    "node": ">=8",
+    "npm": ">=5"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Eseosa Ehioghae",
+  "license": "ISC",
+  "dependencies": {
+    "fabric-contract-api": "^2.2.0",
+    "fabric-shim": "^2.2.0"
+  }
+}

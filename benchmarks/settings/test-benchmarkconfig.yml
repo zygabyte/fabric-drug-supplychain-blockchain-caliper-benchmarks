@@ -8,77 +8,77 @@ test:
   rounds:
   - label: manufacturerCreateDrug
     description: This benchmark test is for the manufacturer creating of drugs on the ledger
-    txNumber: 500
+    txNumber: 5000
     rateControl:
       type: fixed-rate
       opts:
-        tps: 50
+        tps: 500
     callback: benchmarks/callbacks/manufacturerCreateDrug.js
     arguments: 
       txnPerBatch: 10
   - label: manufacturerShipDrug
     description: This benchmark test is for the manufacturer shipping of drugs on the ledger
-    txNumber: 500
+    txNumber: 5000
     rateControl:
       type: fixed-rate
       opts:
-        tps: 50
+        tps: 500
     callback: benchmarks/callbacks/manufacturerShipDrug.js
   - label: distributorReceiveDrug
     description: This benchmark test is for the distributor receiving of drugs on the ledger
-    txNumber: 500
+    txNumber: 5000
     rateControl:
       type: fixed-rate
       opts:
-        tps: 50
+        tps: 500
     callback: benchmarks/callbacks/distributorReceiveDrug.js
   - label: distributorShipDrug
     description: This benchmark test is for the distributor shipping of drugs on the ledger
-    txNumber: 500
+    txNumber: 5000
     rateControl:
       type: fixed-rate
       opts:
-        tps: 50
+        tps: 500
     callback: benchmarks/callbacks/distributorShipDrug.js
   - label: wholesalerReceiveDrug
     description: This benchmark test is the wholesaler receiving of drugs on the ledger
-    txNumber: 500
+    txNumber: 5000
     rateControl:
       type: fixed-rate
       opts:
-        tps: 50
+        tps: 500
     callback: benchmarks/callbacks/wholesalerReceiveDrug.js
   - label: wholesalerShipDrug
     description: This benchmark test is for the wholesaler shipping of drugs on the ledger
-    txNumber: 500
+    txNumber: 5000
     rateControl:
       type: fixed-rate
       opts:
-        tps: 50
+        tps: 500
     callback: benchmarks/callbacks/wholesalerShipDrug.js
   - label: retailerReceiveDrug
     description: This benchmark test is for the retailer receiving of drugs on the ledger
-    txNumber: 500
+    txNumber: 5000
     rateControl:
       type: fixed-rate
       opts:
-        tps: 50
+        tps: 500
     callback: benchmarks/callbacks/retailerReceiveDrug.js
   - label: retailerSellDrug
     description: This benchmark test is for the retailer selling of drugs on the ledger
-    txNumber: 500
+    txNumber: 5000
     rateControl:
       type: fixed-rate
       opts:
-        tps: 50
+        tps: 500
     callback: benchmarks/callbacks/retailerSellDrug.js
   - label: consumerVerifyDrug
     description: This benchmark test is for the consumer verifying of drugs on the ledger
-    txNumber: 500
+    txNumber: 5000
     rateControl:
       type: fixed-rate
       opts:
-        tps: 50
+        tps: 500
     callback: benchmarks/callbacks/consumerVerifyDrug.js
 monitor:
   type:
@@ -87,6 +87,7 @@ monitor:
     containers:
     - 1OrgLocalFabric-Org1Peer1-drugsupplychainnet-0.0.1
     - 1OrgLocalFabric_peer0.org1.example.com
+    - 1OrgLocalFabric_orderer.example.com
     - 1OrgLocalFabric_couchdb0.org1.example.com
     - 1OrgLocalFabric_ca.org1.example.com
     - 1OrgLocalFabric_ca.orderer.example.com
@@ -97,3 +98,29 @@ monitor:
 observer:
   type: local
   interval: 1
+
+# monitor:
+#   type:
+#   - prometheus
+#   prometheus:
+#     push_url: "http://localhost:9091"
+#     url: "http://localhost:9090"
+#     metrics:
+#       ignore: [prometheus, pushGateway, cadvisor, grafana, node-exporter]
+#       include:
+#         Endorse Time(s):
+#           query: rate(endorser_propsal_duration_sum{chaincode="marbles:v0"}[5m])/rate(endorser_propsal_duration_count{chaincode="marbles:v0"}[5m])
+#           step: 1
+#           label: instance
+#           statistic: avg
+#         Max Memory(MB):
+#           query: sum(container_memory_rss{name=~".+"}) by (name)
+#           step: 10
+#           label: name
+#           statistic: max
+#           multiplier: 0.000001
+#     charting:
+#       polar:
+#         metrics: [Max Memory (MB)]
+#       bar:
+#         metrics: [all]

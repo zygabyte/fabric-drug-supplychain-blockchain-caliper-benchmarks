@@ -1,5 +1,5 @@
 <!doctype html>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js"></script>
 <script>
     function plotChart(divId, chartData) {
         // Convert from stringified html, to valid JSON
@@ -137,6 +137,12 @@
                     <li><a href="#manufacturerCreateDrug">manufacturerCreateDrug</a></li>
                     <li><a href="#manufacturerShipDrug">manufacturerShipDrug</a></li>
                     <li><a href="#distributorReceiveDrug">distributorReceiveDrug</a></li>
+                    <li><a href="#distributorShipDrug">distributorShipDrug</a></li>
+                    <li><a href="#wholesalerReceiveDrug">wholesalerReceiveDrug</a></li>
+                    <li><a href="#wholesalerShipDrug">wholesalerShipDrug</a></li>
+                    <li><a href="#retailerReceiveDrug">retailerReceiveDrug</a></li>
+                    <li><a href="#retailerSellDrug">retailerSellDrug</a></li>
+                    <li><a href="#consumerVerifyDrug">consumerVerifyDrug</a></li>
             </ul>
             <ul>
                 <h3>&nbspSystem under test</h3>
@@ -159,13 +165,31 @@
                     </tr>
 
                     <tr>
-                         <td>manufacturerCreateDrug</td> <td>5000</td> <td>0</td> <td>210.0</td> <td>34.50</td> <td>7.39</td> <td>25.84</td> <td>97.9</td>
+                         <td>manufacturerCreateDrug</td> <td>5000</td> <td>0</td> <td>126.7</td> <td>38.19</td> <td>4.54</td> <td>25.99</td> <td>76.3</td>
                     </tr>
                     <tr>
-                         <td>manufacturerShipDrug</td> <td>5000</td> <td>0</td> <td>194.4</td> <td>27.70</td> <td>6.42</td> <td>19.68</td> <td>116.9</td>
+                         <td>manufacturerShipDrug</td> <td>1240</td> <td>3760</td> <td>151.8</td> <td>42.46</td> <td>5.94</td> <td>27.87</td> <td>9.3</td>
                     </tr>
                     <tr>
-                         <td>distributorReceiveDrug</td> <td>1061</td> <td>3939</td> <td>173.8</td> <td>23.04</td> <td>5.05</td> <td>13.49</td> <td>33.3</td>
+                         <td>distributorReceiveDrug</td> <td>0</td> <td>5000</td> <td>171.2</td> <td>0.00</td> <td>100000.00</td> <td>NaN</td> <td>0.0</td>
+                    </tr>
+                    <tr>
+                         <td>distributorShipDrug</td> <td>0</td> <td>5000</td> <td>184.0</td> <td>0.00</td> <td>100000.00</td> <td>NaN</td> <td>0.0</td>
+                    </tr>
+                    <tr>
+                         <td>wholesalerReceiveDrug</td> <td>0</td> <td>5000</td> <td>163.9</td> <td>0.00</td> <td>100000.00</td> <td>NaN</td> <td>0.0</td>
+                    </tr>
+                    <tr>
+                         <td>wholesalerShipDrug</td> <td>0</td> <td>5000</td> <td>184.4</td> <td>0.00</td> <td>100000.00</td> <td>NaN</td> <td>0.0</td>
+                    </tr>
+                    <tr>
+                         <td>retailerReceiveDrug</td> <td>0</td> <td>5000</td> <td>194.1</td> <td>0.00</td> <td>100000.00</td> <td>NaN</td> <td>0.0</td>
+                    </tr>
+                    <tr>
+                         <td>retailerSellDrug</td> <td>0</td> <td>5000</td> <td>96.0</td> <td>0.00</td> <td>100000.00</td> <td>NaN</td> <td>0.0</td>
+                    </tr>
+                    <tr>
+                         <td>consumerVerifyDrug</td> <td>0</td> <td>5000</td> <td>103.0</td> <td>0.00</td> <td>100000.00</td> <td>NaN</td> <td>0.0</td>
                     </tr>
                 </table>
             </div>
@@ -183,7 +207,7 @@
                                      <th>Name</th> <th>Succ</th> <th>Fail</th> <th>Send Rate (TPS)</th> <th>Max Latency (s)</th> <th>Min Latency (s)</th> <th>Avg Latency (s)</th> <th>Throughput (TPS)</th>
                                 </tr>
                                 <tr>
-                                     <td>manufacturerCreateDrug</td> <td>5000</td> <td>0</td> <td>210.0</td> <td>34.50</td> <td>7.39</td> <td>25.84</td> <td>97.9</td>
+                                     <td>manufacturerCreateDrug</td> <td>5000</td> <td>0</td> <td>126.7</td> <td>38.19</td> <td>4.54</td> <td>25.99</td> <td>76.3</td>
                                 </tr>
                             </table>
                         <h3>Resource utilization for manufacturerCreateDrug</h3>
@@ -195,22 +219,22 @@
                                          <th>Name</th> <th>CPU%(max)</th> <th>CPU%(avg)</th> <th>Memory(max) [MB]</th> <th>Memory(avg) [MB]</th> <th>Traffic In [MB]</th> <th>Traffic Out [MB]</th> <th>Disc Write [B]</th> <th>Disc Read [B]</th>
                                     </tr>
                                     <tr>
-                                         <td>1OrgLocalFabric-Org1Peer1-drugsupplychainnet-0.0.1</td> <td>117.72</td> <td>29.48</td> <td>159</td> <td>126</td> <td>9.64</td> <td>11.7</td> <td>0.00</td> <td>0.00</td>
+                                         <td>1OrgLocalFabric-Org1Peer1-drugsupplychainnet-0.0.1</td> <td>114.70</td> <td>34.21</td> <td>127</td> <td>100</td> <td>9.76</td> <td>11.9</td> <td>0.00</td> <td>0.00</td>
                                     </tr>
                                     <tr>
-                                         <td>1OrgLocalFabric_orderer.example.com</td> <td>34.38</td> <td>6.99</td> <td>125</td> <td>79.6</td> <td>27.6</td> <td>27.4</td> <td>0.00</td> <td>0.00</td>
+                                         <td>1OrgLocalFabric_orderer.example.com</td> <td>39.86</td> <td>10.41</td> <td>84.7</td> <td>53.6</td> <td>27.7</td> <td>27.5</td> <td>0.00</td> <td>0.00</td>
                                     </tr>
                                     <tr>
-                                         <td>1OrgLocalFabric_ca.orderer.example.com</td> <td>0.00</td> <td>0.00</td> <td>7.43</td> <td>7.19</td> <td>0.00</td> <td>0.00</td> <td>0.00</td> <td>0.00</td>
+                                         <td>1OrgLocalFabric_ca.orderer.example.com</td> <td>0.01</td> <td>0.00</td> <td>7.62</td> <td>7.62</td> <td>0.0000668</td> <td>0.00</td> <td>0.00</td> <td>0.00</td>
                                     </tr>
                                     <tr>
-                                         <td>1OrgLocalFabric_peer0.org1.example.com</td> <td>64.96</td> <td>32.45</td> <td>378</td> <td>226</td> <td>49.0</td> <td>37.6</td> <td>0.00</td> <td>0.00</td>
+                                         <td>1OrgLocalFabric_peer0.org1.example.com</td> <td>103.29</td> <td>43.89</td> <td>346</td> <td>212</td> <td>49.2</td> <td>37.5</td> <td>0.00</td> <td>0.00</td>
                                     </tr>
                                     <tr>
-                                         <td>1OrgLocalFabric_couchdb0.org1.example.com</td> <td>55.04</td> <td>23.55</td> <td>157</td> <td>100</td> <td>4.34</td> <td>2.91</td> <td>0.00</td> <td>0.00</td>
+                                         <td>1OrgLocalFabric_couchdb0.org1.example.com</td> <td>81.80</td> <td>30.68</td> <td>150</td> <td>104</td> <td>4.11</td> <td>2.87</td> <td>0.00</td> <td>0.00</td>
                                     </tr>
                                     <tr>
-                                         <td>1OrgLocalFabric_ca.org1.example.com</td> <td>0.00</td> <td>0.00</td> <td>7.23</td> <td>7.04</td> <td>0.00</td> <td>0.00</td> <td>0.00</td> <td>0.00</td>
+                                         <td>1OrgLocalFabric_ca.org1.example.com</td> <td>0.01</td> <td>0.00</td> <td>8.47</td> <td>8.47</td> <td>0.0000668</td> <td>0.00</td> <td>0.00</td> <td>0.00</td>
                                     </tr>
                                 </table>
                                 </tr>
@@ -233,7 +257,7 @@
                                      <th>Name</th> <th>Succ</th> <th>Fail</th> <th>Send Rate (TPS)</th> <th>Max Latency (s)</th> <th>Min Latency (s)</th> <th>Avg Latency (s)</th> <th>Throughput (TPS)</th>
                                 </tr>
                                 <tr>
-                                     <td>manufacturerShipDrug</td> <td>5000</td> <td>0</td> <td>194.4</td> <td>27.70</td> <td>6.42</td> <td>19.68</td> <td>116.9</td>
+                                     <td>manufacturerShipDrug</td> <td>1240</td> <td>3760</td> <td>151.8</td> <td>42.46</td> <td>5.94</td> <td>27.87</td> <td>9.3</td>
                                 </tr>
                             </table>
                         <h3>Resource utilization for manufacturerShipDrug</h3>
@@ -245,22 +269,22 @@
                                          <th>Name</th> <th>CPU%(max)</th> <th>CPU%(avg)</th> <th>Memory(max) [MB]</th> <th>Memory(avg) [MB]</th> <th>Traffic In [MB]</th> <th>Traffic Out [MB]</th> <th>Disc Write [B]</th> <th>Disc Read [B]</th>
                                     </tr>
                                     <tr>
-                                         <td>1OrgLocalFabric-Org1Peer1-drugsupplychainnet-0.0.1</td> <td>69.74</td> <td>25.50</td> <td>159</td> <td>137</td> <td>9.75</td> <td>11.9</td> <td>0.00</td> <td>0.00</td>
+                                         <td>1OrgLocalFabric-Org1Peer1-drugsupplychainnet-0.0.1</td> <td>94.61</td> <td>12.95</td> <td>136</td> <td>131</td> <td>9.85</td> <td>12.1</td> <td>0.00</td> <td>0.00</td>
                                     </tr>
                                     <tr>
-                                         <td>1OrgLocalFabric_orderer.example.com</td> <td>35.84</td> <td>10.12</td> <td>143</td> <td>134</td> <td>26.9</td> <td>26.6</td> <td>0.00</td> <td>0.00</td>
+                                         <td>1OrgLocalFabric_orderer.example.com</td> <td>43.82</td> <td>5.94</td> <td>133</td> <td>122</td> <td>27.0</td> <td>26.7</td> <td>0.00</td> <td>0.00</td>
                                     </tr>
                                     <tr>
-                                         <td>1OrgLocalFabric_ca.orderer.example.com</td> <td>0.17</td> <td>0.01</td> <td>6.49</td> <td>6.27</td> <td>0.00</td> <td>0.00</td> <td>0.00</td> <td>0.00</td>
+                                         <td>1OrgLocalFabric_ca.orderer.example.com</td> <td>0.71</td> <td>0.01</td> <td>7.62</td> <td>7.52</td> <td>0.00</td> <td>0.00</td> <td>0.00</td> <td>0.00</td>
                                     </tr>
                                     <tr>
-                                         <td>1OrgLocalFabric_peer0.org1.example.com</td> <td>63.12</td> <td>40.77</td> <td>486</td> <td>429</td> <td>52.9</td> <td>37.9</td> <td>0.00</td> <td>0.00</td>
+                                         <td>1OrgLocalFabric_peer0.org1.example.com</td> <td>77.57</td> <td>18.86</td> <td>465</td> <td>434</td> <td>50.6</td> <td>35.6</td> <td>0.00</td> <td>0.00</td>
                                     </tr>
                                     <tr>
-                                         <td>1OrgLocalFabric_couchdb0.org1.example.com</td> <td>70.51</td> <td>38.36</td> <td>172</td> <td>159</td> <td>4.36</td> <td>8.01</td> <td>0.00</td> <td>0.00</td>
+                                         <td>1OrgLocalFabric_couchdb0.org1.example.com</td> <td>90.10</td> <td>16.36</td> <td>174</td> <td>150</td> <td>2.62</td> <td>5.45</td> <td>0.00</td> <td>0.00</td>
                                     </tr>
                                     <tr>
-                                         <td>1OrgLocalFabric_ca.org1.example.com</td> <td>0.00</td> <td>0.00</td> <td>6.63</td> <td>6.40</td> <td>0.00</td> <td>0.00</td> <td>0.00</td> <td>0.00</td>
+                                         <td>1OrgLocalFabric_ca.org1.example.com</td> <td>0.01</td> <td>0.00</td> <td>8.47</td> <td>8.29</td> <td>0.00</td> <td>0.00</td> <td>0.00</td> <td>0.00</td>
                                     </tr>
                                 </table>
                                 </tr>
@@ -283,7 +307,7 @@
                                      <th>Name</th> <th>Succ</th> <th>Fail</th> <th>Send Rate (TPS)</th> <th>Max Latency (s)</th> <th>Min Latency (s)</th> <th>Avg Latency (s)</th> <th>Throughput (TPS)</th>
                                 </tr>
                                 <tr>
-                                     <td>distributorReceiveDrug</td> <td>1061</td> <td>3939</td> <td>173.8</td> <td>23.04</td> <td>5.05</td> <td>13.49</td> <td>33.3</td>
+                                     <td>distributorReceiveDrug</td> <td>0</td> <td>5000</td> <td>171.2</td> <td>0.00</td> <td>100000.00</td> <td>NaN</td> <td>0.0</td>
                                 </tr>
                             </table>
                         <h3>Resource utilization for distributorReceiveDrug</h3>
@@ -295,22 +319,322 @@
                                          <th>Name</th> <th>CPU%(max)</th> <th>CPU%(avg)</th> <th>Memory(max) [MB]</th> <th>Memory(avg) [MB]</th> <th>Traffic In [MB]</th> <th>Traffic Out [MB]</th> <th>Disc Write [B]</th> <th>Disc Read [B]</th>
                                     </tr>
                                     <tr>
-                                         <td>1OrgLocalFabric-Org1Peer1-drugsupplychainnet-0.0.1</td> <td>87.03</td> <td>38.16</td> <td>147</td> <td>139</td> <td>8.15</td> <td>9.05</td> <td>0.00</td> <td>0.00</td>
+                                         <td>1OrgLocalFabric-Org1Peer1-drugsupplychainnet-0.0.1</td> <td>90.03</td> <td>14.93</td> <td>164</td> <td>152</td> <td>9.92</td> <td>12.7</td> <td>0.00</td> <td>0.00</td>
                                     </tr>
                                     <tr>
-                                         <td>1OrgLocalFabric_orderer.example.com</td> <td>32.19</td> <td>9.22</td> <td>146</td> <td>140</td> <td>19.3</td> <td>19.1</td> <td>0.00</td> <td>0.00</td>
+                                         <td>1OrgLocalFabric_orderer.example.com</td> <td>52.64</td> <td>6.48</td> <td>147</td> <td>143</td> <td>27.5</td> <td>27.3</td> <td>0.00</td> <td>0.00</td>
                                     </tr>
                                     <tr>
-                                         <td>1OrgLocalFabric_ca.orderer.example.com</td> <td>0.00</td> <td>0.00</td> <td>5.66</td> <td>5.53</td> <td>0.00</td> <td>0.00</td> <td>0.00</td> <td>0.00</td>
+                                         <td>1OrgLocalFabric_ca.orderer.example.com</td> <td>0.20</td> <td>0.00</td> <td>7.49</td> <td>7.40</td> <td>0.0000668</td> <td>0.00</td> <td>0.00</td> <td>0.00</td>
                                     </tr>
                                     <tr>
-                                         <td>1OrgLocalFabric_peer0.org1.example.com</td> <td>89.35</td> <td>42.27</td> <td>525</td> <td>499</td> <td>38.6</td> <td>27.1</td> <td>0.00</td> <td>0.00</td>
+                                         <td>1OrgLocalFabric_peer0.org1.example.com</td> <td>64.02</td> <td>18.27</td> <td>536</td> <td>514</td> <td>50.9</td> <td>35.9</td> <td>0.00</td> <td>0.00</td>
                                     </tr>
                                     <tr>
-                                         <td>1OrgLocalFabric_couchdb0.org1.example.com</td> <td>64.66</td> <td>26.72</td> <td>166</td> <td>156</td> <td>1.96</td> <td>4.32</td> <td>0.00</td> <td>0.00</td>
+                                         <td>1OrgLocalFabric_couchdb0.org1.example.com</td> <td>59.71</td> <td>12.96</td> <td>148</td> <td>126</td> <td>2.05</td> <td>4.57</td> <td>0.00</td> <td>0.00</td>
                                     </tr>
                                     <tr>
-                                         <td>1OrgLocalFabric_ca.org1.example.com</td> <td>0.00</td> <td>0.00</td> <td>5.77</td> <td>5.64</td> <td>0.00</td> <td>0.00</td> <td>0.00</td> <td>0.00</td>
+                                         <td>1OrgLocalFabric_ca.org1.example.com</td> <td>0.16</td> <td>0.00</td> <td>8.26</td> <td>8.11</td> <td>0.0000668</td> <td>0.00</td> <td>0.00</td> <td>0.00</td>
+                                    </tr>
+                                </table>
+                                </tr>
+                            </table>
+                            <div class="charting">
+                            </div>
+            </div>
+
+            <div style="border-bottom: 1px solid #d9d9d9; padding-bottom: 10px;" id="distributorShipDrug">
+                <h2>Benchmark round: distributorShipDrug</h2>
+                <p>This benchmark test is for the distributor shipping of drugs on the ledger</p>
+                <pre style="overflow: visible;white-space: pre-wrap;max-height:100%;">rateControl:
+  type: fixed-rate
+  opts:
+    tps: 500
+</pre>
+                        <h3>Performance metrics for distributorShipDrug</h3>
+                            <table style="min-width: 100%;">
+                                <tr>
+                                     <th>Name</th> <th>Succ</th> <th>Fail</th> <th>Send Rate (TPS)</th> <th>Max Latency (s)</th> <th>Min Latency (s)</th> <th>Avg Latency (s)</th> <th>Throughput (TPS)</th>
+                                </tr>
+                                <tr>
+                                     <td>distributorShipDrug</td> <td>0</td> <td>5000</td> <td>184.0</td> <td>0.00</td> <td>100000.00</td> <td>NaN</td> <td>0.0</td>
+                                </tr>
+                            </table>
+                        <h3>Resource utilization for distributorShipDrug</h3>
+                            <h4>Resource monitor: docker</h4>
+                            <table style="min-width: 100%;">
+                                <tr>
+                                <table>
+                                    <tr>
+                                         <th>Name</th> <th>CPU%(max)</th> <th>CPU%(avg)</th> <th>Memory(max) [MB]</th> <th>Memory(avg) [MB]</th> <th>Traffic In [MB]</th> <th>Traffic Out [MB]</th> <th>Disc Write [B]</th> <th>Disc Read [B]</th>
+                                    </tr>
+                                    <tr>
+                                         <td>1OrgLocalFabric-Org1Peer1-drugsupplychainnet-0.0.1</td> <td>107.06</td> <td>20.11</td> <td>178</td> <td>168</td> <td>9.99</td> <td>12.7</td> <td>0.00</td> <td>0.00</td>
+                                    </tr>
+                                    <tr>
+                                         <td>1OrgLocalFabric_orderer.example.com</td> <td>59.46</td> <td>7.85</td> <td>149</td> <td>140</td> <td>27.5</td> <td>27.2</td> <td>0.00</td> <td>0.00</td>
+                                    </tr>
+                                    <tr>
+                                         <td>1OrgLocalFabric_ca.orderer.example.com</td> <td>0.53</td> <td>0.01</td> <td>7.37</td> <td>4.92</td> <td>0.00</td> <td>0.00</td> <td>0.00</td> <td>0.00</td>
+                                    </tr>
+                                    <tr>
+                                         <td>1OrgLocalFabric_peer0.org1.example.com</td> <td>85.59</td> <td>21.65</td> <td>716</td> <td>668</td> <td>51.0</td> <td>36.3</td> <td>0.00</td> <td>0.00</td>
+                                    </tr>
+                                    <tr>
+                                         <td>1OrgLocalFabric_couchdb0.org1.example.com</td> <td>72.24</td> <td>15.21</td> <td>236</td> <td>198</td> <td>2.42</td> <td>4.77</td> <td>0.00</td> <td>0.00</td>
+                                    </tr>
+                                    <tr>
+                                         <td>1OrgLocalFabric_ca.org1.example.com</td> <td>0.17</td> <td>0.00</td> <td>8.04</td> <td>5.06</td> <td>0.00</td> <td>0.00</td> <td>0.00</td> <td>0.00</td>
+                                    </tr>
+                                </table>
+                                </tr>
+                            </table>
+                            <div class="charting">
+                            </div>
+            </div>
+
+            <div style="border-bottom: 1px solid #d9d9d9; padding-bottom: 10px;" id="wholesalerReceiveDrug">
+                <h2>Benchmark round: wholesalerReceiveDrug</h2>
+                <p>This benchmark test is the wholesaler receiving of drugs on the ledger</p>
+                <pre style="overflow: visible;white-space: pre-wrap;max-height:100%;">rateControl:
+  type: fixed-rate
+  opts:
+    tps: 500
+</pre>
+                        <h3>Performance metrics for wholesalerReceiveDrug</h3>
+                            <table style="min-width: 100%;">
+                                <tr>
+                                     <th>Name</th> <th>Succ</th> <th>Fail</th> <th>Send Rate (TPS)</th> <th>Max Latency (s)</th> <th>Min Latency (s)</th> <th>Avg Latency (s)</th> <th>Throughput (TPS)</th>
+                                </tr>
+                                <tr>
+                                     <td>wholesalerReceiveDrug</td> <td>0</td> <td>5000</td> <td>163.9</td> <td>0.00</td> <td>100000.00</td> <td>NaN</td> <td>0.0</td>
+                                </tr>
+                            </table>
+                        <h3>Resource utilization for wholesalerReceiveDrug</h3>
+                            <h4>Resource monitor: docker</h4>
+                            <table style="min-width: 100%;">
+                                <tr>
+                                <table>
+                                    <tr>
+                                         <th>Name</th> <th>CPU%(max)</th> <th>CPU%(avg)</th> <th>Memory(max) [MB]</th> <th>Memory(avg) [MB]</th> <th>Traffic In [MB]</th> <th>Traffic Out [MB]</th> <th>Disc Write [B]</th> <th>Disc Read [B]</th>
+                                    </tr>
+                                    <tr>
+                                         <td>1OrgLocalFabric-Org1Peer1-drugsupplychainnet-0.0.1</td> <td>168.15</td> <td>17.87</td> <td>176</td> <td>168</td> <td>9.91</td> <td>12.7</td> <td>0.00</td> <td>0.00</td>
+                                    </tr>
+                                    <tr>
+                                         <td>1OrgLocalFabric_orderer.example.com</td> <td>73.35</td> <td>7.26</td> <td>192</td> <td>176</td> <td>27.4</td> <td>27.2</td> <td>0.00</td> <td>0.00</td>
+                                    </tr>
+                                    <tr>
+                                         <td>1OrgLocalFabric_ca.orderer.example.com</td> <td>0.16</td> <td>0.00</td> <td>4.41</td> <td>4.34</td> <td>0.00</td> <td>0.00</td> <td>0.00</td> <td>0.00</td>
+                                    </tr>
+                                    <tr>
+                                         <td>1OrgLocalFabric_peer0.org1.example.com</td> <td>108.91</td> <td>19.63</td> <td>744</td> <td>734</td> <td>50.7</td> <td>35.7</td> <td>0.00</td> <td>0.00</td>
+                                    </tr>
+                                    <tr>
+                                         <td>1OrgLocalFabric_couchdb0.org1.example.com</td> <td>60.83</td> <td>14.31</td> <td>167</td> <td>142</td> <td>1.93</td> <td>4.49</td> <td>0.00</td> <td>0.00</td>
+                                    </tr>
+                                    <tr>
+                                         <td>1OrgLocalFabric_ca.org1.example.com</td> <td>0.00</td> <td>0.00</td> <td>4.16</td> <td>4.08</td> <td>0.00</td> <td>0.00</td> <td>0.00</td> <td>0.00</td>
+                                    </tr>
+                                </table>
+                                </tr>
+                            </table>
+                            <div class="charting">
+                            </div>
+            </div>
+
+            <div style="border-bottom: 1px solid #d9d9d9; padding-bottom: 10px;" id="wholesalerShipDrug">
+                <h2>Benchmark round: wholesalerShipDrug</h2>
+                <p>This benchmark test is for the wholesaler shipping of drugs on the ledger</p>
+                <pre style="overflow: visible;white-space: pre-wrap;max-height:100%;">rateControl:
+  type: fixed-rate
+  opts:
+    tps: 500
+</pre>
+                        <h3>Performance metrics for wholesalerShipDrug</h3>
+                            <table style="min-width: 100%;">
+                                <tr>
+                                     <th>Name</th> <th>Succ</th> <th>Fail</th> <th>Send Rate (TPS)</th> <th>Max Latency (s)</th> <th>Min Latency (s)</th> <th>Avg Latency (s)</th> <th>Throughput (TPS)</th>
+                                </tr>
+                                <tr>
+                                     <td>wholesalerShipDrug</td> <td>0</td> <td>5000</td> <td>184.4</td> <td>0.00</td> <td>100000.00</td> <td>NaN</td> <td>0.0</td>
+                                </tr>
+                            </table>
+                        <h3>Resource utilization for wholesalerShipDrug</h3>
+                            <h4>Resource monitor: docker</h4>
+                            <table style="min-width: 100%;">
+                                <tr>
+                                <table>
+                                    <tr>
+                                         <th>Name</th> <th>CPU%(max)</th> <th>CPU%(avg)</th> <th>Memory(max) [MB]</th> <th>Memory(avg) [MB]</th> <th>Traffic In [MB]</th> <th>Traffic Out [MB]</th> <th>Disc Write [B]</th> <th>Disc Read [B]</th>
+                                    </tr>
+                                    <tr>
+                                         <td>1OrgLocalFabric-Org1Peer1-drugsupplychainnet-0.0.1</td> <td>90.69</td> <td>14.72</td> <td>161</td> <td>156</td> <td>9.85</td> <td>12.6</td> <td>0.00</td> <td>0.00</td>
+                                    </tr>
+                                    <tr>
+                                         <td>1OrgLocalFabric_orderer.example.com</td> <td>54.21</td> <td>6.35</td> <td>209</td> <td>187</td> <td>27.4</td> <td>27.2</td> <td>0.00</td> <td>0.00</td>
+                                    </tr>
+                                    <tr>
+                                         <td>1OrgLocalFabric_ca.orderer.example.com</td> <td>0.81</td> <td>0.03</td> <td>8.63</td> <td>7.76</td> <td>0.0000668</td> <td>0.00</td> <td>0.00</td> <td>0.00</td>
+                                    </tr>
+                                    <tr>
+                                         <td>1OrgLocalFabric_peer0.org1.example.com</td> <td>62.78</td> <td>16.90</td> <td>748</td> <td>746</td> <td>50.6</td> <td>35.6</td> <td>0.00</td> <td>0.00</td>
+                                    </tr>
+                                    <tr>
+                                         <td>1OrgLocalFabric_couchdb0.org1.example.com</td> <td>68.79</td> <td>12.45</td> <td>142</td> <td>138</td> <td>1.92</td> <td>4.50</td> <td>0.00</td> <td>0.00</td>
+                                    </tr>
+                                    <tr>
+                                         <td>1OrgLocalFabric_ca.org1.example.com</td> <td>0.15</td> <td>0.00</td> <td>4.13</td> <td>4.10</td> <td>0.0000668</td> <td>0.00</td> <td>0.00</td> <td>0.00</td>
+                                    </tr>
+                                </table>
+                                </tr>
+                            </table>
+                            <div class="charting">
+                            </div>
+            </div>
+
+            <div style="border-bottom: 1px solid #d9d9d9; padding-bottom: 10px;" id="retailerReceiveDrug">
+                <h2>Benchmark round: retailerReceiveDrug</h2>
+                <p>This benchmark test is for the retailer receiving of drugs on the ledger</p>
+                <pre style="overflow: visible;white-space: pre-wrap;max-height:100%;">rateControl:
+  type: fixed-rate
+  opts:
+    tps: 500
+</pre>
+                        <h3>Performance metrics for retailerReceiveDrug</h3>
+                            <table style="min-width: 100%;">
+                                <tr>
+                                     <th>Name</th> <th>Succ</th> <th>Fail</th> <th>Send Rate (TPS)</th> <th>Max Latency (s)</th> <th>Min Latency (s)</th> <th>Avg Latency (s)</th> <th>Throughput (TPS)</th>
+                                </tr>
+                                <tr>
+                                     <td>retailerReceiveDrug</td> <td>0</td> <td>5000</td> <td>194.1</td> <td>0.00</td> <td>100000.00</td> <td>NaN</td> <td>0.0</td>
+                                </tr>
+                            </table>
+                        <h3>Resource utilization for retailerReceiveDrug</h3>
+                            <h4>Resource monitor: docker</h4>
+                            <table style="min-width: 100%;">
+                                <tr>
+                                <table>
+                                    <tr>
+                                         <th>Name</th> <th>CPU%(max)</th> <th>CPU%(avg)</th> <th>Memory(max) [MB]</th> <th>Memory(avg) [MB]</th> <th>Traffic In [MB]</th> <th>Traffic Out [MB]</th> <th>Disc Write [B]</th> <th>Disc Read [B]</th>
+                                    </tr>
+                                    <tr>
+                                         <td>1OrgLocalFabric-Org1Peer1-drugsupplychainnet-0.0.1</td> <td>85.04</td> <td>17.51</td> <td>159</td> <td>144</td> <td>9.89</td> <td>12.6</td> <td>0.00</td> <td>0.00</td>
+                                    </tr>
+                                    <tr>
+                                         <td>1OrgLocalFabric_orderer.example.com</td> <td>51.04</td> <td>9.46</td> <td>220</td> <td>101</td> <td>-165</td> <td>-</td> <td>0.00</td> <td>0.00</td>
+                                    </tr>
+                                    <tr>
+                                         <td>1OrgLocalFabric_ca.orderer.example.com</td> <td>0.00</td> <td>0.00</td> <td>8.63</td> <td>8.37</td> <td>0.0000668</td> <td>0.00</td> <td>0.00</td> <td>0.00</td>
+                                    </tr>
+                                    <tr>
+                                         <td>1OrgLocalFabric_peer0.org1.example.com</td> <td>65.41</td> <td>18.45</td> <td>772</td> <td>762</td> <td>48.0</td> <td>35.6</td> <td>0.00</td> <td>0.00</td>
+                                    </tr>
+                                    <tr>
+                                         <td>1OrgLocalFabric_couchdb0.org1.example.com</td> <td>60.64</td> <td>14.61</td> <td>152</td> <td>143</td> <td>1.93</td> <td>4.54</td> <td>0.00</td> <td>0.00</td>
+                                    </tr>
+                                    <tr>
+                                         <td>1OrgLocalFabric_ca.org1.example.com</td> <td>0.00</td> <td>0.00</td> <td>4.13</td> <td>3.90</td> <td>0.0000668</td> <td>0.00</td> <td>0.00</td> <td>0.00</td>
+                                    </tr>
+                                </table>
+                                </tr>
+                            </table>
+                            <div class="charting">
+                            </div>
+            </div>
+
+            <div style="border-bottom: 1px solid #d9d9d9; padding-bottom: 10px;" id="retailerSellDrug">
+                <h2>Benchmark round: retailerSellDrug</h2>
+                <p>This benchmark test is for the retailer selling of drugs on the ledger</p>
+                <pre style="overflow: visible;white-space: pre-wrap;max-height:100%;">rateControl:
+  type: fixed-rate
+  opts:
+    tps: 500
+</pre>
+                        <h3>Performance metrics for retailerSellDrug</h3>
+                            <table style="min-width: 100%;">
+                                <tr>
+                                     <th>Name</th> <th>Succ</th> <th>Fail</th> <th>Send Rate (TPS)</th> <th>Max Latency (s)</th> <th>Min Latency (s)</th> <th>Avg Latency (s)</th> <th>Throughput (TPS)</th>
+                                </tr>
+                                <tr>
+                                     <td>retailerSellDrug</td> <td>0</td> <td>5000</td> <td>96.0</td> <td>0.00</td> <td>100000.00</td> <td>NaN</td> <td>0.0</td>
+                                </tr>
+                            </table>
+                        <h3>Resource utilization for retailerSellDrug</h3>
+                            <h4>Resource monitor: docker</h4>
+                            <table style="min-width: 100%;">
+                                <tr>
+                                <table>
+                                    <tr>
+                                         <th>Name</th> <th>CPU%(max)</th> <th>CPU%(avg)</th> <th>Memory(max) [MB]</th> <th>Memory(avg) [MB]</th> <th>Traffic In [MB]</th> <th>Traffic Out [MB]</th> <th>Disc Write [B]</th> <th>Disc Read [B]</th>
+                                    </tr>
+                                    <tr>
+                                         <td>1OrgLocalFabric-Org1Peer1-drugsupplychainnet-0.0.1</td> <td>144.64</td> <td>19.11</td> <td>126</td> <td>119</td> <td>9.99</td> <td>12.7</td> <td>0.00</td> <td>0.00</td>
+                                    </tr>
+                                    <tr>
+                                         <td>1OrgLocalFabric_orderer.example.com</td> <td>0.00</td> <td>0.00</td> <td>0.00</td> <td>0.00</td> <td>0.00</td> <td>-</td> <td>0.00</td> <td>0.00</td>
+                                    </tr>
+                                    <tr>
+                                         <td>1OrgLocalFabric_ca.orderer.example.com</td> <td>0.00</td> <td>0.00</td> <td>8.61</td> <td>8.61</td> <td>0.00</td> <td>0.00</td> <td>0.00</td> <td>0.00</td>
+                                    </tr>
+                                    <tr>
+                                         <td>1OrgLocalFabric_peer0.org1.example.com</td> <td>117.80</td> <td>21.09</td> <td>771</td> <td>771</td> <td>23.9</td> <td>35.6</td> <td>0.00</td> <td>0.00</td>
+                                    </tr>
+                                    <tr>
+                                         <td>1OrgLocalFabric_couchdb0.org1.example.com</td> <td>139.07</td> <td>17.50</td> <td>128</td> <td>128</td> <td>1.87</td> <td>4.45</td> <td>0.00</td> <td>0.00</td>
+                                    </tr>
+                                    <tr>
+                                         <td>1OrgLocalFabric_ca.org1.example.com</td> <td>0.00</td> <td>0.00</td> <td>3.74</td> <td>3.74</td> <td>0.00</td> <td>0.00</td> <td>0.00</td> <td>0.00</td>
+                                    </tr>
+                                </table>
+                                </tr>
+                            </table>
+                            <div class="charting">
+                            </div>
+            </div>
+
+            <div style="border-bottom: 1px solid #d9d9d9; padding-bottom: 10px;" id="consumerVerifyDrug">
+                <h2>Benchmark round: consumerVerifyDrug</h2>
+                <p>This benchmark test is for the consumer verifying of drugs on the ledger</p>
+                <pre style="overflow: visible;white-space: pre-wrap;max-height:100%;">rateControl:
+  type: fixed-rate
+  opts:
+    tps: 500
+</pre>
+                        <h3>Performance metrics for consumerVerifyDrug</h3>
+                            <table style="min-width: 100%;">
+                                <tr>
+                                     <th>Name</th> <th>Succ</th> <th>Fail</th> <th>Send Rate (TPS)</th> <th>Max Latency (s)</th> <th>Min Latency (s)</th> <th>Avg Latency (s)</th> <th>Throughput (TPS)</th>
+                                </tr>
+                                <tr>
+                                     <td>consumerVerifyDrug</td> <td>0</td> <td>5000</td> <td>103.0</td> <td>0.00</td> <td>100000.00</td> <td>NaN</td> <td>0.0</td>
+                                </tr>
+                            </table>
+                        <h3>Resource utilization for consumerVerifyDrug</h3>
+                            <h4>Resource monitor: docker</h4>
+                            <table style="min-width: 100%;">
+                                <tr>
+                                <table>
+                                    <tr>
+                                         <th>Name</th> <th>CPU%(max)</th> <th>CPU%(avg)</th> <th>Memory(max) [MB]</th> <th>Memory(avg) [MB]</th> <th>Traffic In [MB]</th> <th>Traffic Out [MB]</th> <th>Disc Write [B]</th> <th>Disc Read [B]</th>
+                                    </tr>
+                                    <tr>
+                                         <td>1OrgLocalFabric-Org1Peer1-drugsupplychainnet-0.0.1</td> <td>73.94</td> <td>17.39</td> <td>119</td> <td>116</td> <td>11.4</td> <td>7.07</td> <td>0.00</td> <td>0.00</td>
+                                    </tr>
+                                    <tr>
+                                         <td>1OrgLocalFabric_orderer.example.com</td> <td>0.00</td> <td>0.00</td> <td>0.00</td> <td>0.00</td> <td>0.00</td> <td>-</td> <td>0.00</td> <td>0.00</td>
+                                    </tr>
+                                    <tr>
+                                         <td>1OrgLocalFabric_ca.orderer.example.com</td> <td>0.32</td> <td>0.00</td> <td>8.61</td> <td>8.61</td> <td>0.00</td> <td>0.00</td> <td>0.00</td> <td>0.00</td>
+                                    </tr>
+                                    <tr>
+                                         <td>1OrgLocalFabric_peer0.org1.example.com</td> <td>65.29</td> <td>19.59</td> <td>805</td> <td>799</td> <td>13.8</td> <td>25.2</td> <td>0.00</td> <td>0.00</td>
+                                    </tr>
+                                    <tr>
+                                         <td>1OrgLocalFabric_couchdb0.org1.example.com</td> <td>17.91</td> <td>1.62</td> <td>126</td> <td>125</td> <td>0.00</td> <td>0.00</td> <td>0.00</td> <td>0.00</td>
+                                    </tr>
+                                    <tr>
+                                         <td>1OrgLocalFabric_ca.org1.example.com</td> <td>0.30</td> <td>0.00</td> <td>3.74</td> <td>3.74</td> <td>0.00</td> <td>0.00</td> <td>0.00</td> <td>0.00</td>
                                     </tr>
                                 </table>
                                 </tr>

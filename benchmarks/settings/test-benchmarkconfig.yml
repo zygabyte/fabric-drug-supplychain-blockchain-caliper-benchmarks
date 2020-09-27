@@ -12,7 +12,7 @@ test:
     rateControl:
       type: fixed-rate
       opts:
-        tps: 500
+        tps: 100
     callback: benchmarks/callbacks/manufacturerCreateDrug.js
     arguments: 
       txnPerBatch: 10
@@ -22,7 +22,7 @@ test:
     rateControl:
       type: fixed-rate
       opts:
-        tps: 500
+        tps: 100
     callback: benchmarks/callbacks/manufacturerShipDrug.js
   - label: distributorReceiveDrug
     description: This benchmark test is for the distributor receiving of drugs on the ledger
@@ -30,7 +30,7 @@ test:
     rateControl:
       type: fixed-rate
       opts:
-        tps: 500
+        tps: 100
     callback: benchmarks/callbacks/distributorReceiveDrug.js
   - label: distributorShipDrug
     description: This benchmark test is for the distributor shipping of drugs on the ledger
@@ -38,7 +38,7 @@ test:
     rateControl:
       type: fixed-rate
       opts:
-        tps: 500
+        tps: 100
     callback: benchmarks/callbacks/distributorShipDrug.js
   - label: wholesalerReceiveDrug
     description: This benchmark test is the wholesaler receiving of drugs on the ledger
@@ -46,7 +46,7 @@ test:
     rateControl:
       type: fixed-rate
       opts:
-        tps: 500
+        tps: 100
     callback: benchmarks/callbacks/wholesalerReceiveDrug.js
   - label: wholesalerShipDrug
     description: This benchmark test is for the wholesaler shipping of drugs on the ledger
@@ -54,7 +54,7 @@ test:
     rateControl:
       type: fixed-rate
       opts:
-        tps: 500
+        tps: 100
     callback: benchmarks/callbacks/wholesalerShipDrug.js
   - label: retailerReceiveDrug
     description: This benchmark test is for the retailer receiving of drugs on the ledger
@@ -62,7 +62,7 @@ test:
     rateControl:
       type: fixed-rate
       opts:
-        tps: 500
+        tps: 100
     callback: benchmarks/callbacks/retailerReceiveDrug.js
   - label: retailerSellDrug
     description: This benchmark test is for the retailer selling of drugs on the ledger
@@ -70,7 +70,7 @@ test:
     rateControl:
       type: fixed-rate
       opts:
-        tps: 500
+        tps: 100
     callback: benchmarks/callbacks/retailerSellDrug.js
   - label: consumerVerifyDrug
     description: This benchmark test is for the consumer verifying of drugs on the ledger
@@ -78,7 +78,7 @@ test:
     rateControl:
       type: fixed-rate
       opts:
-        tps: 500
+        tps: 100
     callback: benchmarks/callbacks/consumerVerifyDrug.js
 monitor:
   type:
